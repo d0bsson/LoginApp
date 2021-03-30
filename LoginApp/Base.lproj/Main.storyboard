@@ -51,6 +51,9 @@
                                         <rect key="frame" x="18.666666666666657" y="133" width="63" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <segue destination="DDz-NJ-Mar" kind="presentation" id="16P-fy-mHr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -65,10 +68,60 @@
                             <constraint firstItem="nwZ-tm-UcW" firstAttribute="top" secondItem="vHE-E6-JE4" secondAttribute="bottom" constant="31" id="zdr-bV-Mdc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forgotNameButton" destination="91s-df-rQk" id="IIp-35-g7t"/>
+                        <outlet property="forgotPasswordButton" destination="f0P-4w-3Xj" id="shB-QN-sj6"/>
+                        <outlet property="logInButton" destination="GaD-n7-9Ty" id="JQY-q8-QIw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TAw-g1-Yw3">
+            <objects>
+                <viewController id="DDz-NJ-Mar" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lJt-Ln-GbU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fO-zF-rHN">
+                                <rect key="frame" x="168.33333333333334" y="212" width="77.666666666666657" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1E8-CX-hQU">
+                                <rect key="frame" x="164.66666666666666" y="658" width="85" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFt-Kx-dnD">
+                                <rect key="frame" x="154.33333333333334" y="132" width="105.33333333333334" height="26.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mip-JA-WWk"/>
+                        <color key="backgroundColor" red="1" green="0.81849364449999995" blue="0.77807777320000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="7fO-zF-rHN" firstAttribute="top" secondItem="nFt-Kx-dnD" secondAttribute="bottom" constant="53.670000000000002" id="MWq-D7-eQ4"/>
+                            <constraint firstItem="1E8-CX-hQU" firstAttribute="centerX" secondItem="lJt-Ln-GbU" secondAttribute="centerX" id="Mfq-tg-z3u"/>
+                            <constraint firstItem="mip-JA-WWk" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="nFt-Kx-dnD" secondAttribute="trailing" constant="154.33000000000001" id="UEG-o1-4iI"/>
+                            <constraint firstItem="nFt-Kx-dnD" firstAttribute="top" secondItem="mip-JA-WWk" secondAttribute="top" constant="132" id="bj5-bS-pyA"/>
+                            <constraint firstItem="nFt-Kx-dnD" firstAttribute="centerX" secondItem="lJt-Ln-GbU" secondAttribute="centerX" id="dMn-Hr-5Ab"/>
+                            <constraint firstItem="mip-JA-WWk" firstAttribute="bottom" secondItem="1E8-CX-hQU" secondAttribute="bottom" constant="110" id="uWb-Gn-MgC"/>
+                            <constraint firstItem="7fO-zF-rHN" firstAttribute="centerX" secondItem="lJt-Ln-GbU" secondAttribute="centerX" id="ye7-al-S4f"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jsi-Vb-rVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.98550724637687" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>
