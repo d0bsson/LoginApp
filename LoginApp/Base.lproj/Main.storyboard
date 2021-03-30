@@ -111,6 +111,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logOutAction" destination="DDz-NJ-Mar" eventType="touchUpInside" id="6pa-TR-EY1"/>
+                                    <segue destination="pgh-hP-2s3" kind="unwind" unwindAction="unwindFor:" id="BmW-Sm-xp3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFt-Kx-dnD">
@@ -138,6 +139,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsi-Vb-rVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="pgh-hP-2s3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="828.98550724637687" y="77.678571428571431"/>
         </scene>

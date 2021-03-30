@@ -22,7 +22,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,11 +35,19 @@ class LoginViewController: UIViewController {
             return
         }
     }
+    
     @IBAction func forgotUserNameAction() {
         showForgotLogin(title: "Oh my god...", message: "I can enter your user name")
     }
+    
     @IBAction func forgotPasswordAction() {
         showForgotPass(title: "Oh my god...", message: "I can enter your password 🤫")
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let _ = segue.source as? WelcomeViewController else { return }
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
 }
 
