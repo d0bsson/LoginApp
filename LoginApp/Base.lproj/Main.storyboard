@@ -24,10 +24,16 @@
                                         <state key="normal" title="Forgot User Name?">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotUserNameAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vtj-uS-weo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0P-4w-3Xj">
                                         <rect key="frame" x="185" y="0.0" width="123" height="30"/>
                                         <state key="normal" title="Forgot Password?"/>
+                                        <connections>
+                                            <action selector="forgotPasswordAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Bt-NR-q36"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -54,6 +60,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
+                                            <action selector="logInButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="PIw-rY-TKX"/>
                                             <segue destination="DDz-NJ-Mar" kind="presentation" id="16P-fy-mHr"/>
                                         </connections>
                                     </button>
@@ -74,6 +81,7 @@
                         <outlet property="forgotNameButton" destination="91s-df-rQk" id="IIp-35-g7t"/>
                         <outlet property="forgotPasswordButton" destination="f0P-4w-3Xj" id="shB-QN-sj6"/>
                         <outlet property="logInButton" destination="GaD-n7-9Ty" id="JQY-q8-QIw"/>
+                        <outlet property="passwordTF" destination="GyY-XC-MUn" id="7d1-Gp-33o"/>
                         <outlet property="userNameTF" destination="ccy-1L-TVB" id="Pkg-Mw-6XH"/>
                     </connections>
                 </viewController>
