@@ -29,7 +29,14 @@ class LoginViewController: UIViewController {
         welcomeVC.userName = userNameTF.text
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func logInButtonAction() {
+        if userNameTF.text != login || passwordTF.text != password {
+            showAlert(title: "Atantion!", message: "Wrong login or password!")
+        }
         guard let inputText = userNameTF.text, !inputText.isEmpty else {
             showAlert(title: "Atantion!", message: "Login or password is empty!")
             return
@@ -56,14 +63,18 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
         let correctAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(correctAction)
         present(alert, animated: true)
     }
     
     private func showForgotLogin(title: String, message: String) {
-        let showLogin = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let showLogin = UIAlertController(title: title,
+                                          message: message,
+                                          preferredStyle: .alert)
         let correctLogin = UIAlertAction(title: "OK, thx!", style: .default) { _ in
             self.userNameTF.text = self.login
         }
@@ -72,7 +83,9 @@ extension LoginViewController {
     }
     
     private func showForgotPass(title: String, message: String) {
-        let showPass = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let showPass = UIAlertController(title: title,
+                                         message: message,
+                                         preferredStyle: .alert)
         let correctPass = UIAlertAction(title: "OK, thx!", style: .default) { _ in
             self.passwordTF.text = self.password
         }
@@ -80,6 +93,14 @@ extension LoginViewController {
         present(showPass, animated: true)
     }
 }
+    
+    
+    
+
+
+    
+    
+
 
 
 
