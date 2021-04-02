@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    private let login = "user"
+    private let user = "user"
     private let password = "12345"
     
     override func viewDidLoad() {
@@ -30,11 +30,12 @@ class LoginViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     @IBAction func logInButtonAction() {
-        if userNameTF.text != login || passwordTF.text != password {
+        if userNameTF.text != user || passwordTF.text != password {
             showAlert(title: "Atantion!", message: "Wrong login or password!")
         }
         guard let inputText = userNameTF.text, !inputText.isEmpty else {
@@ -42,17 +43,17 @@ class LoginViewController: UIViewController {
             return
         }
     }
-    
+
     @IBAction func forgotUserNameAction() {
-        showForgotLogin(title: "Oh my god...", message: "I can enter your user name")
+        showAlert(title: "Your username is", message: user)
     }
     
     @IBAction func forgotPasswordAction() {
-        showForgotPass(title: "Oh my god...", message: "I can enter your password 🤫")
+        showAlert(title: "Your password is", message: password)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let _ = segue.source as? WelcomeViewController else { return }
+        let _ = segue.source as? WelcomeViewController
         userNameTF.text = ""
         passwordTF.text = ""
     }
@@ -69,28 +70,8 @@ extension LoginViewController {
         let correctAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(correctAction)
         present(alert, animated: true)
-    }
-    
-    private func showForgotLogin(title: String, message: String) {
-        let showLogin = UIAlertController(title: title,
-                                          message: message,
-                                          preferredStyle: .alert)
-        let correctLogin = UIAlertAction(title: "OK, thx!", style: .default) { _ in
-            self.userNameTF.text = self.login
-        }
-        showLogin.addAction(correctLogin)
-        present(showLogin, animated: true)
-    }
-    
-    private func showForgotPass(title: String, message: String) {
-        let showPass = UIAlertController(title: title,
-                                         message: message,
-                                         preferredStyle: .alert)
-        let correctPass = UIAlertAction(title: "OK, thx!", style: .default) { _ in
-            self.passwordTF.text = self.password
-        }
-        showPass.addAction(correctPass)
-        present(showPass, animated: true)
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
 }
     
