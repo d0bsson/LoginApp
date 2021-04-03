@@ -87,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="18.75" y="77.5"/>
         </scene>
-        <!--Item-->
+        <!--Welcome-->
         <scene sceneID="TAw-g1-Yw3">
             <objects>
                 <viewController id="DDz-NJ-Mar" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,7 +131,7 @@
                             <constraint firstItem="7fO-zF-rHN" firstAttribute="centerX" secondItem="lJt-Ln-GbU" secondAttribute="centerX" id="ye7-al-S4f"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="o4b-jL-MUc"/>
+                    <tabBarItem key="tabBarItem" title="Welcome" image="figure.wave" catalog="system" id="o4b-jL-MUc"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="nFt-Kx-dnD" id="d90-f9-P6R"/>
                     </connections>
@@ -141,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="1798.5981308411215" y="76.45788336933046"/>
         </scene>
-        <!--Item-->
+        <!--About-->
         <scene sceneID="h4c-9B-TSA">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEJ-Re-3R7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -152,7 +152,7 @@
                         <viewLayoutGuide key="safeArea" id="ImK-f1-Ezn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="32e-77-Atd"/>
+                    <tabBarItem key="tabBarItem" title="About" image="info" catalog="system" id="32e-77-Atd"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="317" y="820"/>
@@ -192,11 +192,11 @@
             </objects>
             <point key="canvasLocation" x="898.59813084112147" y="76.45788336933046"/>
         </scene>
-        <!--Item-->
+        <!--Quest-->
         <scene sceneID="zHM-eo-MgK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="geh-bp-jsA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="C8S-jU-TMK"/>
+                    <tabBarItem key="tabBarItem" title="Quest" image="questionmark.diamond" catalog="system" selectedImage="questionmark.square.dashed" id="C8S-jU-TMK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RcX-QW-WNx">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -213,6 +213,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="figure.wave" catalog="system" width="81" height="128"/>
+        <image name="info" catalog="system" width="93" height="128"/>
+        <image name="questionmark.diamond" catalog="system" width="128" height="122"/>
+        <image name="questionmark.square.dashed" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
