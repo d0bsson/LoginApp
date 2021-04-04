@@ -8,6 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
+//MARK: IB Outlets
     
     @IBOutlet weak var logInButton: UIButton!
     
@@ -17,11 +18,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+//MARK: Private Properties
     private let user = User(person: Person())
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+//MARK: Override Methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else {return}
@@ -46,6 +46,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+//MARK: IB Actions
     @IBAction func logInButtonAction() {
         if userNameTF.text != user.login || passwordTF.text != user.password {
             showAlert(title: "Atantion!", message: "Wrong login or password!")
@@ -82,7 +83,6 @@ extension LoginViewController {
         let correctAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(correctAction)
         present(alert, animated: true)
-        userNameTF.text = ""
         passwordTF.text = ""
     }
 }

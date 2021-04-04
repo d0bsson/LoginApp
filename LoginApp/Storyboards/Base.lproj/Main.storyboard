@@ -107,7 +107,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="logOutAction" destination="DDz-NJ-Mar" eventType="touchUpInside" id="6pa-TR-EY1"/>
                                     <segue destination="pgh-hP-2s3" kind="unwind" unwindAction="unwindFor:" id="BmW-Sm-xp3"/>
                                 </connections>
                             </button>
