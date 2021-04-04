@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var logInButton: UIButton!
     
@@ -17,16 +17,28 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    private let user = "user"
-    private let password = "12345"
+    private let user = User(person: Person())
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user
+        guard let tabBarController = segue.destination as? UITabBarController else {return}
+        guard let viewControllers = tabBarController.viewControllers else {return}
+        
+        for viewController in viewControllers {
+            if let infoVC = viewController as? InfoViewController {
+                infoVC.info = user.person.info
+                }
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = "\(user.person.name) \(user.person.secondName)"
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let questVC = navigationVC.topViewController as? QuestViewController else {return}
+                questVC.user = user
+                questVC.question = user.person.question
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -35,7 +47,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInButtonAction() {
-        if userNameTF.text != user || passwordTF.text != password {
+        if userNameTF.text != user.login || passwordTF.text != user.password {
             showAlert(title: "Atantion!", message: "Wrong login or password!")
         }
         guard let inputText = userNameTF.text, !inputText.isEmpty else {
@@ -45,11 +57,11 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func forgotUserNameAction() {
-        showAlert(title: "Your username is", message: user)
+        showAlert(title: "Your username is", message: user.login)
     }
     
     @IBAction func forgotPasswordAction() {
-        showAlert(title: "Your password is", message: password)
+        showAlert(title: "Your password is", message: user.password)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -74,6 +86,8 @@ extension LoginViewController {
         passwordTF.text = ""
     }
 }
+
+
     
     
     

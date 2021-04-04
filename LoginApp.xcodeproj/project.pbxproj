@@ -14,6 +14,10 @@
 		D7C60CB326126C900099DAB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7C60CB226126C900099DAB7 /* Assets.xcassets */; };
 		D7C60CB626126C900099DAB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7C60CB426126C900099DAB7 /* LaunchScreen.storyboard */; };
 		D7C60CBF2613450D0099DAB7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C60CBE2613450C0099DAB7 /* WelcomeViewController.swift */; };
+		D7C60CF32618BAF00099DAB7 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C60CF22618BAF00099DAB7 /* QuestViewController.swift */; };
+		D7C60CF92618BD530099DAB7 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C60CF82618BD530099DAB7 /* InfoViewController.swift */; };
+		D7D39D8C2619D00400542A66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D39D8B2619D00400542A66 /* User.swift */; };
+		D7D39D912619E2F100542A66 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D39D902619E2F100542A66 /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		D7C60CB526126C900099DAB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7C60CB726126C900099DAB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7C60CBE2613450C0099DAB7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		D7C60CF22618BAF00099DAB7 /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
+		D7C60CF82618BD530099DAB7 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		D7D39D8B2619D00400542A66 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D7D39D902619E2F100542A66 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +66,9 @@
 		D7C60CA826126C8E0099DAB7 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				D7C60CEE2618B7F20099DAB7 /* Models */,
 				D7C60CEC2618B7DF0099DAB7 /* ViewControllers */,
 				D7C60CE72618B7BC0099DAB7 /* Storyboards */,
-				D7C60CEE2618B7F20099DAB7 /* Models */,
 				D7C60CE82618B7CE0099DAB7 /* Supporting */,
 				D7C60CEF2618B8000099DAB7 /* Resources */,
 			);
@@ -91,6 +99,9 @@
 			children = (
 				D7C60CAD26126C8E0099DAB7 /* LoginViewController.swift */,
 				D7C60CBE2613450C0099DAB7 /* WelcomeViewController.swift */,
+				D7C60CF22618BAF00099DAB7 /* QuestViewController.swift */,
+				D7C60CF82618BD530099DAB7 /* InfoViewController.swift */,
+				D7D39D902619E2F100542A66 /* AnswerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -98,6 +109,7 @@
 		D7C60CEE2618B7F20099DAB7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D7D39D8B2619D00400542A66 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,8 +194,12 @@
 			files = (
 				D7C60CAE26126C8E0099DAB7 /* LoginViewController.swift in Sources */,
 				D7C60CBF2613450D0099DAB7 /* WelcomeViewController.swift in Sources */,
+				D7C60CF32618BAF00099DAB7 /* QuestViewController.swift in Sources */,
 				D7C60CAA26126C8E0099DAB7 /* AppDelegate.swift in Sources */,
+				D7D39D912619E2F100542A66 /* AnswerViewController.swift in Sources */,
+				D7C60CF92618BD530099DAB7 /* InfoViewController.swift in Sources */,
 				D7C60CAC26126C8E0099DAB7 /* SceneDelegate.swift in Sources */,
+				D7D39D8C2619D00400542A66 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
